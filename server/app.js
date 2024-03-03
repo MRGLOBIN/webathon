@@ -49,7 +49,7 @@ app.use(express.json())
 app.use(express.static(path.join(__dirname, '..', 'public')))
 
 app.get(
-  '/auth/google',
+  '/login/auth/google',
   passport.authenticate('google', {
     scope: ['email'],
   })
@@ -64,13 +64,13 @@ app.get('/failure', (req, res) => {
   res.send('failed to login!')
 })
 
-app.post('/login', (req, res) => {
-  const { email, passwrod } = req.body
-})
+// app.post('/login', (req, res) => {
+//   const { email, passwrod } = req.body
+// })
 
-app.get('/secret', checkLoggedIn, (req, res) => {
-  return res.send('Your personal secret value is 8080')
-})
+// app.get('/secret', checkLoggedIn, (req, res) => {
+//   return res.send('Your personal secret value is 8080')
+// })
 
 app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'public', 'index.html'))
