@@ -13,6 +13,10 @@
     "helmet": "^7.0.0",
     "passport": "0.5",
     "passport-google-oauth20": "^2.0.0",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "axios": "^1.4.0",
+    "mongoose": "^7.3.4",
+    "nodemon": "^3.0.1",
+    "cookie-session": "^2.0.0"
   }
 }
